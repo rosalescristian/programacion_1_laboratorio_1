@@ -1,0 +1,58 @@
+Apuntes en Laboratorio de Programacion - 18/03/19
+
+** Laboratorio se rinde en PC, es desarrollo.
+** Programacion se rinde en papel, es teorico.
+** Leer los materiales previo a las clases.
+** Todos los martes hay parcialitos.
+
+- Pasamos de JS a C.
+- El primero es un lenguaje interpretado mientras en C es Compilado.
+- En C trabajamos con Editor de Texto (el q querramos); un compilador, y con un enlazador
+- JS tiene el tipo de Datos Booleano. En C no. 0 = False // != 0 es True.
+- Funciona tdo igual salvo el Switch. en JS los cases se pueden hacer con palabras, en C no. Solo nros Enteros o 1 solo caracter.
+- Literal en JS es indistinto " " o ' '. En C, un solo caracter va con ' '. Si es cadena de caracteres va entre " ".
+-  Los operadores en JS y en C son iguales:
+a) Aritmeticos (+ - * / %)
+b) Logicos (|| && !)
+c) Relacionales (== != > >= < <=)
+d) Asignacion ( = )
+
+- JS es un lenguaje No Tipado. A las variables les podemos asignar cualquier valor. En C, el lenguaje es Fuertemente TIPADO; se declara variable y el tipo de dato q contiene. Siempre en minusculas ( int / char / float / double / void) : tipo variable inicializacion:
+- Palabras reservadas, se usan signed - unsigned; por ejemplo.
+
+- Inferfaz de salida en JS:
+document.write
+alert
+document.getElementById(' ').value {con este ingresamos o mostramos datos}
+console.log
+
+-Interfaz de salida en C:
+- printf
+
+8 bits == 1 byte
+'a' = 97 = 01100001
+'A' = 65 = 01000001
+En Binario, cada _ es una posicion de la base de 1 byte, es decir 2 a la 8.
+_ _ _ _ _ _ _ _
+
+En JS se usaban para ingresar datos en JS:
+prompt
+document.get......
+
+En C se usa:
+- scanf
+
+- Tanto printf como scanf funcionan con modificadores ( %c %s %i/%d %f ) % y un caracter, siempre en minusculas, si usamos numeros, %i = integer / %d = decimal // %f es para flotante o doble // %c para un solo caracter // %s para una cadena de caracteres.
+- si quiero mostrar un mensaje por pantalla haria: printf("Hola mundo!");
+- En JS usabamos alert("Su nombre es :"+nombre); /// si lo queremos hacer en C, hariamos: printf("Su nombre es: "+nombre); --> esto no funciona; en JS + es para concatenar, en C es aritmetico.
+- La forma correcta es: printf("Su nombre es: %s",nombre); // El valor de la variable reemplaza el tipo de datos %s (el modificador)
+- Si queriamos mostrar nombre y edad en JS: alert("Su nombre es :"+nombre+" y su edad es "+edad); en C: printf("Su nombre es: %s y su edad es: %d",nombre, edad); /// los modificadores son reemplazados por los varoles de los variables en el exacto mismo orden q se escriben
+- alert y printf son funciones, y las funciones llevan argumentos. 
+
+- Para tomar datos usamos scanf("%d", &edad); {hay 1 solo caso donde el & no se usa}. El & significa la direccion de memoria.
+
+- el uso de la primer linea -- #include <stdio.h> -- es para utilizar biblioteca por si usamos printf o scanf
+
+- Las dos bibliotecas que usamos casi de manera obligatoria:
+#include<stdio.h>
+#include<stdlib.h>
