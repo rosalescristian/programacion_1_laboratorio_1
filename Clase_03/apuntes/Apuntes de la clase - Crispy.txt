@@ -1,0 +1,7 @@
+Ejercitamos Bucles y Tomas de decisiones
+
+Tuve un error raro en GIT q me decia q no era el dueño o algo asi, xq me tomaba como usuario del GIT "alumno" el nombre de la pc en la red. Para corregirlo tuve que correr esto en el bash;
+
+git config --global user.name "rosalescristian"
+git config --global user.email rosalescristianm@gmail.com
+git commit --amend --reset-author
