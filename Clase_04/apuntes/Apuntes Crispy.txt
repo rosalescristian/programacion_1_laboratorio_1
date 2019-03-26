@@ -1,0 +1,73 @@
+**https://www.learn-c.org/
+**https://www.quora.com/What-is-the-first-step-for-learning-C-and-C++
+**https://css-tricks.com/where-do-you-learn-html-css-in-2019/
+**https://css-tricks.com/guides/beginner/
+**https://www.khanacademy.org/computing/computer-programming/html-css
+**https://www.aaonline.io/
+**
+
+Punteros o apuntador:
+int nro;
+int *n;
+nro = 3;
+Se declaran como int *n;
+Los punteros guardan direcciones de memorias no valores, y en ese lugar de memoria vamos a guardar un dato de tipo entero.
+
+Las direcciones memoria siempre empiezan en la posicion 0X100 (0x es el comienzo siempre)
+si queremos aceder al valor de memoria, debemos escrbir:
+n = &nro;
+nro=8;
+*n=8
+printf("%d",*n); (Con esto busco la indireccion del valor de direccion de memoria)
+
+Funciones:
+Debemos tener en cuenta tres preguntas:
+¿Que realiza?
+¿Que retorna?
+¿Que recibe?
+
+Por ejemplo int main.(){Codigo Vario}
+¿Que realiza? - Es la funcion mas importante de nuestro programa
+¿Que retorna? - Un nro entero
+¿Que recibe? - No recibe nada xq esta vacia
+
+Otra funcion:
+int scanf(char*, char*);
+¿Que realiza? - Funcion para tomar todo
+¿Que retorna? - Un nro entero q determina si tuvimos exito o no
+¿Que recibe? - Dos valores de texto
+
+Un funcion de suma:
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n1, n2, result;
+    printf("Numero 1:");
+scanf("%d",&n1);
+    printf("Numero 2:");
+scanf("%d",&n2);
+result = nro1+nro2; // Este es el primer ejemplo de resolver -- lo cambiamos por:
+result=suma(n1,n2); <-- esto me va a tomar la funcion suma de la parte de abajo
+printf("La suma es:  %d",&result);
+    return 0;
+}
+
+otra funcion:
+int suma(int op1, int op 2){
+int res;
+res=op1+op2;
+return res;
+}
+
+Los prototipos se definen valores formales; esto quiere decir q se enuncian los tipos y la cantidad de variables, es riguroso, si no se cumple, no funciona.
+En la corrida de la funcion SUMA dentro de main, se llama parametro actual (Es el valor de las variables en la corrida q lleva en curso actualmente).
+
+En Variables:
+SET = Setear un valor en una variable
+GET = recuperar el valor definido de una variable
+
+
+Pasaje de parametros por valor, se COPIA el valor en dos variables dentro de las funciones.
+
