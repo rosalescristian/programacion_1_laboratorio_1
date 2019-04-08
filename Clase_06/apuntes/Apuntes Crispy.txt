@@ -1,0 +1,3 @@
+En C no hay tipo de datos string, se usa un vector char con longitud maxima.
+
+
