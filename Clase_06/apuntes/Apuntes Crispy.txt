@@ -1,3 +1,14 @@
 En C no hay tipo de datos string, se usa un vector char con longitud maxima.
 
+Los operadores logicos no me sirven para comprar strings. Son solo para datos unicos, no para cadenas de valores, no para arrays
+
+Usando strcmp(); string comparission, compara los valores dentro de cada string;
+como determina los valores, por el valor en el abecedario.
+Usa la logica del codigo ASCII.
+
+
+
+
+
+
 
