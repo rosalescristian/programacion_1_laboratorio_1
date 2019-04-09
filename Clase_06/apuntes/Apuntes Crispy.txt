@@ -6,6 +6,20 @@ Usando strcmp(); string comparission, compara los valores dentro de cada string;
 como determina los valores, por el valor en el abecedario.
 Usa la logica del codigo ASCII.
 
+stricmp es igual que strcmp pero no es sensible a mayusculas y minusculas. NO LA USEMOS
+
+Y tb tenemos:
+strupr(); To upper case;
+strlwr() to lower case;
+Son ideales para formatear digamos
+
+toupper - es para 1 solo caracter
+tolower - es para 1 solo caracter
+
+strupr(); To upper case; para cadenas de caracteres
+strlwr() to lower case;  para cadenas de caracteres
+
+strcat(); sirve para concatenar cadena1+cadena2
 
 
 
