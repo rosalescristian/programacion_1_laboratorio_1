@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1555374236 source:d:\rosales\programacion_1_laboratorio_1\clase_08\ejercicio\estructura de datos con bibliotecas\arrays_estructura_datos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"personas.h"
+
+1555374506 d:\rosales\programacion_1_laboratorio_1\clase_08\ejercicio\estructura de datos con bibliotecas\arrays_estructura_datos\personas.h
+
+1555373968 source:d:\rosales\programacion_1_laboratorio_1\clase_08\ejercicio\estructura de datos con bibliotecas\arrays_estructura_datos\personas.c
+	<stdio.h>
+	<stdlib.h>
+	"personas.h"
+
