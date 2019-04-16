@@ -9,10 +9,16 @@ void alta( ePersona pers[], int cantidad ){
         printf("Apellido:\n");
         fflush(stdin);
         scanf("%s", pers[i].apellido);
+        strlwr(pers[i].apellido);
 
         printf("Nombre:\n");
         fflush(stdin);
         scanf("%s", pers[i].nombre);
+        strlwr(pers[i].nombre);
+
+        printf("Sexo:\n");
+        fflush(stdin);
+        scanf("%c", &pers[i].sexo);
 
         printf("Edad:\n");
         scanf("%d", &pers[i].edad);
@@ -30,6 +36,6 @@ void mostrarTodos( ePersona pers[], int cantidad ){
 
 }
 
-void mostrarUno( ePersona per ){
-        printf("%s\t%s\t%d\t%d\n", per.apellido, per.nombre, per.edad, per.isEmpty);
+void mostrarUno( ePersona per, int cantidad ){
+        printf("%s\t%s\t%c\n%d\t%d\n", per.apellido, per.nombre, per.sexo, per.edad, per.isEmpty);
 }

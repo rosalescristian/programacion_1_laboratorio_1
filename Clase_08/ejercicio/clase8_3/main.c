@@ -11,7 +11,8 @@ int main(){
 
     system("cls");
 
-    mostrarTodos(pers, CANT);
+    //mostrarTodos(pers, CANT);
+    mostrarUno(pers, CANT);
 
     return 0;
 }
