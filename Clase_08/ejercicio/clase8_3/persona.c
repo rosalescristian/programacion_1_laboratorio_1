@@ -9,16 +9,10 @@ void alta( ePersona pers[], int cantidad ){
         printf("Apellido:\n");
         fflush(stdin);
         scanf("%s", pers[i].apellido);
-        strlwr(pers[i].apellido);
 
         printf("Nombre:\n");
         fflush(stdin);
         scanf("%s", pers[i].nombre);
-        strlwr(pers[i].nombre);
-
-        printf("Sexo:\n");
-        fflush(stdin);
-        scanf("%c", &pers[i].sexo);
 
         printf("Edad:\n");
         scanf("%d", &pers[i].edad);
@@ -36,6 +30,23 @@ void mostrarTodos( ePersona pers[], int cantidad ){
 
 }
 
-void mostrarUno( ePersona per, int cantidad ){
-        printf("%s\t%s\t%c\n%d\t%d\n", per.apellido, per.nombre, per.sexo, per.edad, per.isEmpty);
+void mostrarUno( ePersona per ){
+        printf("%s\t%s\t%d\t%d\n", per.apellido, per.nombre, per.edad, per.isEmpty);
 }
+
+//Hacer una funcion para IsEmpty que en el ABM tiene q ser 0 cuando cargo datos y tiene 1 ser 1 cuando borras.
+//
+
+//Crear una funcion pra buscar por DNI para evitar documentos repetidos
+int buscarpordni(ePersona Pers[], int cantidad, int dni aux);
+como devuelve un entero, lo declaro
+int retorno=0;
+for(){
+    if(){
+        retorno=1;
+        break;
+    }
+    return=retorno;
+}
+
+//Tb podemos meter el int como -1 o 0 y q el retorno sea el indice para q me devuelva el indice repetido donde figura el dato repetido.

@@ -23,12 +23,6 @@ per.fechanac.mes;
 per.fechanac.ano;
 */
 
-int main()
-{
-    printf("Hello world!\n");
-    return 0;
-}
-
 //Datos Parametrizables
 typedef struc{
     int id;
