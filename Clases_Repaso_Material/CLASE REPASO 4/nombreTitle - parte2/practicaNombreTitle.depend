@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1537017535 source:d:\clase repaso 4\clase4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1537017884 source:d:\clase repaso 4\clase4\validator.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1537027629 source:d:\clase repaso 4\nombretitle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"libOrdenamiento.h"
+
+1537025774 source:d:\clase repaso 4\nombretitle\validator.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1537027677 source:d:\clase repaso 4\nombretitle\libordenamiento.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1537026823 d:\clase repaso 4\nombretitle\libordenamiento.h
+

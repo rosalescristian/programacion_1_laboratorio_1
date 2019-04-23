@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1537618141 source:d:\clase repaso 5\clase5\structlib.c
+
+1537622239 source:d:\clase repaso 5\clase5\fecha.c
+
+1537632302 source:d:\clase repaso 5\clase5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+
+1537622251 d:\clase repaso 5\clase5\fecha.h
+
+1537632204 d:\clase repaso 5\clase5\persona.h
+	<stdio.h>
+	<stdlib.h>
+	"fecha.h"
+
+1537632267 source:d:\clase repaso 5\clase5\persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+

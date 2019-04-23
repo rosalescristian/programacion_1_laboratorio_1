@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1536412248 source:d:\arrays\main.c
+	<stdio.h>
+	<stdlib.h>
+	"func.h"
+
+1512143470 d:\arrays\func.h
+
+1536418027 source:x:\clase repaso 3 - practica arrays\main.c
+	<stdio.h>
+	<stdlib.h>
+

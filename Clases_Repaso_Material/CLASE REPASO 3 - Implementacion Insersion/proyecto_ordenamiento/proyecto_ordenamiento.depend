@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1536419246 source:d:\proyecto_ordenamiento\func.c
+	<stdio.h>
+	<stdlib.h>
+
+1536419802 source:d:\proyecto_ordenamiento\main.c
+	<stdio.h>
+	<stdlib.h>
+	"func.h"
+
+1536418438 d:\proyecto_ordenamiento\func.h
+
