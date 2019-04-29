@@ -1,0 +1,180 @@
+# depslib dependency file v1.0
+1533062952 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/Employee.c
+
+1533063050 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1532354323 /home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/LinkedList.h
+
+1533062926 /home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/Employee.h
+
+1533063080 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533062952 source:/home/mauro/Descargas/TP3/Linux_64/Employee.c
+
+1533066103 source:/home/mauro/Descargas/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1532354323 /home/mauro/Descargas/TP3/Linux_64/LinkedList.h
+
+1533066103 /home/mauro/Descargas/TP3/Linux_64/Employee.h
+
+1533063080 source:/home/mauro/Descargas/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533145792 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533118898 /home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/LinkedList.h
+
+1533118898 /home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Employee.h
+
+1533118898 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Employee.c
+
+1533145890 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541189209 source:c:\users\gustavo\desktop\win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533133022 c:\users\gustavo\desktop\win_32\linkedlist.h
+
+1541183429 c:\users\gustavo\desktop\win_32\employee.h
+
+1541189343 source:c:\users\gustavo\desktop\win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1533133022 c:\users\gustavo\desktop\win_32\controller.h
+
+1541184168 source:c:\users\gustavo\desktop\win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+
+1541184329 source:c:\users\gustavo\desktop\win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541430555 source:c:\users\alumno\desktop\ejercicioprueba\win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"bibliotecaGetsYComprobaciones.h"
+	"parser.h"
+	"Controller.h"
+	<string.h>
+
+1541418160 c:\users\alumno\desktop\ejercicioprueba\win_32\linkedlist.h
+
+1541427883 c:\users\alumno\desktop\ejercicioprueba\win_32\employee.h
+
+1541430469 source:c:\users\alumno\desktop\ejercicioprueba\win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"bibliotecaGetsYComprobaciones.h"
+
+1541423210 c:\users\alumno\desktop\ejercicioprueba\win_32\controller.h
+
+1541428598 source:c:\users\alumno\desktop\ejercicioprueba\win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+	"bibliotecaGetsYComprobaciones.h"
+	<conio.h>
+
+1541418160 source:c:\users\alumno\desktop\ejercicioprueba\win_32\bibliotecagetsycomprobaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1541418160 c:\users\alumno\desktop\ejercicioprueba\win_32\bibliotecagetsycomprobaciones.h
+
+1541418160 c:\users\alumno\desktop\ejercicioprueba\win_32\parser.h
+
+1541430469 source:c:\users\alumno\desktop\ejercicioprueba\win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541620787 source:c:\users\gustavo\desktop\ejercicioprueba\win_32\bibliotecagetsycomprobaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1541627041 source:c:\users\gustavo\desktop\ejercicioprueba\win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+	"bibliotecaGetsYComprobaciones.h"
+	<conio.h>
+
+1541624001 c:\users\gustavo\desktop\ejercicioprueba\win_32\employee.h
+
+1541620787 c:\users\gustavo\desktop\ejercicioprueba\win_32\bibliotecagetsycomprobaciones.h
+
+1541628489 source:c:\users\gustavo\desktop\ejercicioprueba\win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541620787 c:\users\gustavo\desktop\ejercicioprueba\win_32\linkedlist.h
+
+1541628510 source:c:\users\gustavo\desktop\ejercicioprueba\win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"bibliotecaGetsYComprobaciones.h"
+	"parser.h"
+	"Controller.h"
+	<string.h>
+
+1541620787 c:\users\gustavo\desktop\ejercicioprueba\win_32\parser.h
+
+1541620787 c:\users\gustavo\desktop\ejercicioprueba\win_32\controller.h
+
+1541627971 source:c:\users\gustavo\desktop\ejercicioprueba\win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"bibliotecaGetsYComprobaciones.h"
+

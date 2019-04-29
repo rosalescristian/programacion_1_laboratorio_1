@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1554469364 source:d:\martinez tomas\clase 5-04\biblio.c
+	"biblio.h"
+
+1554469759 d:\martinez tomas\clase 5-04\biblio.h
+
+1554469419 source:d:\martinez tomas\clase 5-04\main.c
+	<stdio.h>
+	<stdlib.h>
+	"biblio.h"
+

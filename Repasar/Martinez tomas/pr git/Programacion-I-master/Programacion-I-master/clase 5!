@@ -1,0 +1,15 @@
+puntero: es una variable que guarda una direccion de memoria.
+si tengo una variable qu eesta en el main y quiero modificar ese valor denrto de la funcion, tengo que pasar la referencia de la variable, por lo tanto estoy dentro de la funcion apuntando hacia afuera, es decir, pasando un parametro por referencia
+
+vectores: los vectores son un conjunto de elementos, ya sean char, int o float, pero siempre del mismo tipo, que responden ante el mismo nombre.
+En un vector con 4 elementos, supongamos que son int, cada uno ocupa 4 bytes, en una celda tenemos el limite inferior y el limite superior(numeros 0 y 4);  """ int vector[5] TIPO NOMBRE[TAMAÑO DEL VECTOR] """
+El limite inferior siempre sera 0 y el limite superior n-1;
+Como accedemos a un valor? Vector[2]=9; (quiere decir que, en el segundo lugar guardo el valor 9)
+
+Como mostrarlo? printf("%d", vector[2]);
+
+Se pueden relacionar dos vectores? Si, se les llaman vectores paralelos, ejemplo= vector edad, vector año en que nacio
+
+CARGA ALEATORIA:
+
+Swap: intercambiar valores entre variables
