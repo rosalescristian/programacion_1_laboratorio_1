@@ -53,8 +53,8 @@ ALMUERZOS: Se dará de alta cada ocurrencia de Almuerzo, relacionando Menu – Empl
 E)INFORMAR:
 1)Total y promedio de los importes, y cuantos almuerzos superan ese promedio.
 2)Total y promedio de los importes, y cuantos almuerzos NO superan ese promedio.
-3)La cantidad de almuerzos que fueron consumidos por al menos 5 (cinco) empleados.
-4)La cantidad de almuerzos que fueron consumidos por menos de 5 (cinco) empleados.
+3)La cantidad de menues que fueron consumidos por al menos 5 (cinco) empleados.
+4)La cantidad de menues que fueron consumidos por menos de 5 (cinco) empleados.
 
 
 NOTAS: 
