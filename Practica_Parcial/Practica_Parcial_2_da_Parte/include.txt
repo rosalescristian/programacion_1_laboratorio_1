@@ -1,0 +1,7 @@
+#ifndef employee_H_INCLUDED
+#define employee_H_INCLUDED
+
+//aca van las estructuras y prototipos
+
+
+#endif // employee_H_INCLUDED

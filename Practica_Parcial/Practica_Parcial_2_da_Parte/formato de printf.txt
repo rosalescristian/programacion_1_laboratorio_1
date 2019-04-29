@@ -1,0 +1,4 @@
+printf("\n%02d\n", 1);
+
+    printf("%.5s\n", "Esto es muy largo");
+    system("pause");
