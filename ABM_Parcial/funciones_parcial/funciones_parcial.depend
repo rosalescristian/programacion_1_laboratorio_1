@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1557171711 source:d:\programacion\programacion_1_laboratorio_1\abm_parcial\funciones_parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1557172914 source:d:\programacion\programacion_1_laboratorio_1\abm_parcial\funciones_parcial\funciones.c
+	<stdio.h>
+	<stdlib.h>
+
