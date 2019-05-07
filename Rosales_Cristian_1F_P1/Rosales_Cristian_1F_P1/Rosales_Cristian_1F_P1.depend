@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1557183073 source:d:\rosales\rosales_cristian_1f_p1\rosales_cristian_1f_p1\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1557180491 source:d:\rosales\rosales_cristian_1f_p1\rosales_cristian_1f_p1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1557188095 d:\rosales\rosales_cristian_1f_p1\rosales_cristian_1f_p1\header.h
+
