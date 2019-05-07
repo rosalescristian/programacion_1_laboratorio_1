@@ -2,8 +2,13 @@
 #include <stdlib.h>
 #ifndef prototipos.h
 #define prototipos.h
+//#define CANTIDAD 10
 
-#define CANTIDAD 10
+#define LIBRE 0
+#define OCUPADO 1
+#define ELIMINADO -1
+
+int CANTIDAD=10;
 
 typedef struct
 {
@@ -16,12 +21,12 @@ e_fecha dd;
 e_fecha mm;
 e_fecha yyyy;
 
-typedef struct //autor
+typedef struct
 {
     //char lista;
-    int codigo_autor[CANTIDAD]; // auto incremental
-    char apellido_autor[31]; // validar
-    char nombre_autor[31]; // validar
+    int codigo_autor;//[CANTIDAD]; // auto incremental
+    char apellido_autor;//[CANTIDAD][31]; // validar
+    char nombre_autor;//[CANTIDAD][31]; // validar
 }e_autor;
 
 //e_autor lista;
@@ -29,11 +34,11 @@ e_autor codigo_autor; //= {"1","2","3","4","5"};
 e_autor apellido_autor;// = {"Rosales","Rowling","Tolkien","Galeano","Cortazar"};
 e_autor nombre_autor;// = {"Cristian","JK","JRR","Eduardo","Julio"};
 
-typedef struct //libro
+typedef struct
 {
     //char lista;
-    int codigo_libro[CANTIDAD]; // autoincrementak
-    char titulo_libro[CANTIDAD][51]; // validar
+    int codigo_libro;//[CANTIDAD]; // autoincrementak
+    char titulo_libro;//[CANTIDAD][51]; // validar
     e_autor codigo_autor; // validar
 }e_libro;
 
@@ -41,17 +46,20 @@ typedef struct //libro
 e_libro codigo_libro;//={"5","4","3","2","1"};
 e_libro titulo_libro;//={"Libro_1","Libro_2","Libro_3","Libro_4","Libro_5"};
 
-typedef struct //socio
+typedef struct
 {
     //char lista[CANTIDAD];
-    int codigo_socio[CANTIDAD]; // autoincremental
-    char apellido_socio[CANTIDAD][31]; // (debe existir)validar
-    char nombre_socio[CANTIDAD][31]; // (debe existir)validar
-    char sexo[CANTIDAD]; // F - M
-    char telefono_socio[CANTIDAD][16]; // validar
-    char email_socio[CANTIDAD][31]; // validar
-    e_fecha fecha_asociado;//VALIDAR 10 caracteres dd mm yyyy
-    int is_empty[CANTIDAD];
+    int codigo_socio;//[CANTIDAD]; // autoincremental
+    char apellido_socio[31]; // (debe existir)validar
+    char nombre_socio[31]; // (debe existir)validar
+    char sexo; // F - M
+    char telefono_socio[16]; // validar
+    char email_socio[31]; // validar
+    e_fecha fecha_asociado;//VALIDAR 12 caracteres dd mm yyyy
+    int is_empty;
+    int eId;
+    int id;
+
 }e_socio;
 
 e_socio codigo_socio;
@@ -61,17 +69,17 @@ e_socio nombre_socio;// = {"Socio_N_1","Socio_N_2","Socio_N_3","Socio_N_4","Soci
 e_socio sexo_socio;
 e_socio telefono_socio;
 e_socio email_socio;
+e_socio eId;
+e_socio id;
 
-typedef struct prestamo
+typedef struct
 {
- //   char lista[CANTIDAD];
+    //char lista[CANTIDAD];
     int codigo_prestamo;
     e_libro codigo_libro;
     e_socio codigo_socio;
     e_fecha fecha_prestamo;//10 caracteres dd mm yyyy
 }e_prestamo;
-
-
 
 
 /**< MENU DE OPCION DE SOFTWARE - DE ACA DISPARO EL RESTO DE LAS FUNCIONES */
@@ -86,7 +94,8 @@ int funcion_menu(int salida)
 
 while(opcion_input = 1)
 {
-    /*printf("Ha inresado una opcion no valida. Vuelva a seleccionar:\n\n1-Alta de Socio\n2-Modificar Socio\n3-Baja de Socio\n4-Listar Socios\n5-Listar Libros\n6-Listar Autores\n7-Prestamos\n8-Salir\n")
+    /*printf("Ha inresado una opcion no valida. Vuelva a seleccionar:\n\n1-Alta de Socio\n2-Modificar Socio\n3-Baja de Socio\n4-
+ Socios\n5-Listar Libros\n6-Listar Autores\n7-Prestamos\n8-Salir\n")
     scanf("%d",&opcion);*/
 switch(opcion)
         {
@@ -146,58 +155,263 @@ switch(opcion)
 }
 }
 
-
-/**< FUNCION GET INT - TENGO Q DEVOLVER EL INT PARA LA FUNCION MENU */
-
-int get_int(int opcion)
+int funcion_submenu()
 {
-    int auxiliar_opcion = opcion, opcion_input;
-    while (auxiliar_opcion < 0 || auxiliar_opcion > 8)
-    {
-        printf("Ha inresado una opcion no valida. Vuelva a seleccionar:\n\n1-Alta de Socio\n2-Modificar Socio\n3-Baja de Socio\n4-Listar Socios\n5-Listar Libros\n6-Listar Autores\n7-Prestamos\n8-Salir\n");
-        scanf("%d",&auxiliar_opcion);
-        opcion_input = 0;
-    }
-    opcion_input = 1;
-    return opcion_input;
+    int opcion;
+
+    printf("\tElija la opcion para Modificar Socio\n\n");
+    printf(" 1 Nombre\n\n");
+    printf(" 2 Apellido\n\n");
+    printf(" 3 Sexo\n\n");
+    printf(" 4 Telefono\n\n");
+    printf(" 4 Mail\n\n");
+    printf(" 5 Modificar todos los campos\n\n\n");
+    printf(" 0 Salir\n\n");
+    printf("\n%c  Opcion elegida: ", 254);
+    fflush(stdin);
+    scanf("%d",&opcion);
+    return opcion;
 }
 
 
-void modificar_socio(e_socio vector[])
+void pedirNombre(char nombre, int CANTIDAD)
 {
-    int codigo_socio;
-    char confirma;
-    int is_empty;
-    int esta;
-    char nuevo_nombre[31];
+    char buffer[1000];
+    int maximosCharParaVerificar=CANTIDAD;
 
-    printf("Ingrese codigo de autor: ");
-    scanf("%d", &codigo_socio);
+    printf("Ingrese Nombre: ");
+    fflush(stdin);
+    gets(buffer);
 
-    is_empty = buscar_socio(vector, CANTIDAD, codigo_socio);
-
-    if( is_empty == -1){
-
-        printf("\nEl codigo_socio %d no esta registrado en el sistema\n", codigo_socio);
-    }
-    else{
-        mostrar_socio(vector[esta]);
-
-        printf("\nQuiere modificar el socio? s/n");
+    while(strlen(buffer)>maximosCharParaVerificar||strlen(buffer)<1)
+    {
+        system("cls");
+        printf("\n[Error 1 a %d Maximo de Caracteres] Reingrese nombre: ", maximosCharParaVerificar-1);
         fflush(stdin);
-        confirma = tolower(getche());
-
-        if(confirma == 's'){
-            printf("\nIngrese nombre: ");
-            scanf("%s", &nuevo_nombre);
-            //valido sueldo
-            vector[esta].nombre_socio = nuevo_nombre;
-        }
-        else{
-            printf("\nNo se ha modificado el nombre.\n");
-        }
+        gets(buffer);
 
     }
+    strlwr(buffer);//PASO TODO A MINUSCULA
+    buffer[0]=toupper(buffer[0]); //CONVIERTO PRIMER CARACTER EN MAYUSCULA
+    strcpy (nombre, buffer);//DESCARGO EL BUFFER EN EL NOMBRE
+}
+
+void pedirApellido(char apellido, int CANTIDAD)
+{
+    char buffer[1000];
+    int maximosCharParaVerificar=CANTIDAD;
+
+    printf("Ingrese Apellido: ");
+    fflush(stdin);
+    gets(buffer);
+
+    while(strlen(buffer)>maximosCharParaVerificar||strlen(buffer)<1)
+    {
+        system("cls");
+        printf("\n[Error 1 a %d Maximo de Caracteres] Reingrese Apellido: ", maximosCharParaVerificar-1);
+        fflush(stdin);
+        gets(buffer);
+
+    }
+    strlwr(buffer);//PASO TODO A MINUSCULA
+    buffer[0]=toupper(buffer[0]); //CONVIERTO PRIMER CARACTER EN MAYUSCULA
+    strcpy (apellido, buffer);//COMO SALI DESCARGO EL BUFFER EN EL NOMBRE
+
+}
+
+int validarChars(char nombreParaValidar[])
+{
+    int i=0, retornoValidacion=0, j;
+
+    j=strlen(nombreParaValidar);
+
+    while (i<j && retornoValidacion==0)
+    {
+        if (isalpha(nombreParaValidar[i])!=0)
+        {
+            i++;
+        }
+        else
+        {
+            retornoValidacion=1;
+            system("cls");
+            printf("\n[Error, solo se deben ingresar letras]");
+        }
+    }
+    return retornoValidacion;
+}
+
+void pedirNombreValidarChars(char nombre, int CANTIDAD)
+{
+    int validar=0;
+    do
+    {
+        pedirNombre(nombre, CANTIDAD);
+        validar=validarChars(nombre);
+    }
+    while (validar!=0);
+
+}
+
+void pedirApellidoValidarChars(char apellido, int CANTIDAD)
+{
+    int validar=0;
+    do
+    {
+        pedirApellido(apellido, CANTIDAD);
+        validar=validarChars(apellido);
+    }
+    while (validar!=0);
+
+}
+
+int validarNumeroExcluyeSignos(char numero[])
+{
+    int i=0, retornoValidacion=0, j;
+
+    j=strlen(numero);
+    while (i<j && retornoValidacion==0)
+    {
+        if (isdigit(numero[i])!=0||numero[i]=='.'||numero[i]==','||numero[i]=='-')
+        {
+            i++;
+        }
+        else
+        {
+            retornoValidacion=1;
+        }
+    }
+    return retornoValidacion;
+}
+
+void concatenarNombreApellido(char nombreCompleto[], char cadenaApellido[], char cadenaNombre[])
+{
+    int i;
+
+    /** FORMATO "Apellido, Nombre" */
+
+    strcpy(nombreCompleto, cadenaApellido);
+    strcat(nombreCompleto, ", ");
+    strcat(nombreCompleto, cadenaNombre);
+
+    strlwr(nombreCompleto); //CONVIERTE TODA LA CADENA A MINUSCULA
+
+    nombreCompleto[0]=toupper(nombreCompleto[0]);
+
+    for(i=0; i<strlen(nombreCompleto); i++)
+    {
+        if (isspace(nombreCompleto[i])) //(nombreCompleto[i]==' ')
+        {
+            nombreCompleto[i+1]=toupper(nombreCompleto[i+1]);//PASA EN MAYUSCULA EL CARACTER DESPUES DEL ESPACIO
+        }
+    }
+}
+
+int pedirInt(char MSJ)
+{
+    int valorInt;
+    char buffer[30];
+
+    printf("%s: ", MSJ);
+    fflush(stdin);
+    gets(buffer);
+
+    while(validarNumero(buffer)==1)
+    {
+        printf("Error: Numero no validao. Reingrese");
+        fflush(stdin);
+        gets(buffer);
+    }
+
+    valorInt=atoi(buffer);
+
+    return valorInt;
+}
+
+int modificar_socio(e_socio codigo_socio[], int CANTIDAD)
+{
+    int flag=0;
+    int flagDos=0;
+    int eID;
+    int i;
+    int existe=0;
+    int verificar=cantidadEmpleadosTrueFalse(codigo_socio, CANTIDAD);
+    //int verificar=cantidadSociosTrueFalse(codigo_socio, CANTIDAD);
+
+    if (verificar==0)
+    {
+        system("cls");
+        puts("\nNingun socio para modificar\n\n");
+    }
+
+    while(verificar==1&&flag==0)
+    {
+        flag=1;
+        system("cls");
+        puts("\nModificar Socio\n\n");
+        eID=pedirInt("Igrese Cod. Socio a Modificar");
+        system("cls");
+        printf("\nCod. Socio: N%c %d\n", 248, eID);
+
+        for(i=0; i<CANTIDAD; i++)
+        {
+            if(codigo_socio[i].id==eID&&codigo_socio[i].is_empty==OCUPADO)
+            {
+                puts("\nSocio Encontrado\n");
+                switch(funcion_submenu())
+
+                {
+                case 1:
+                    system("cls");
+                    pedirNombreValidarChars(codigo_socio[i].nombre_socio, 31);
+                    existe=1;
+                    break;
+                case 2:
+                    system("cls");
+                    pedirApellidoValidarChars(codigo_socio[i].apellido_socio, 31);
+                    existe=1;
+                    break;
+                case 3:
+                    system("cls");
+//                    codigo_socio[i].salary=pedirFloat("INGRESE SALARIO");
+                    existe=1;
+                    /**< PEDIR SEXO */
+                    break;
+                case 4:
+                    system("cls");
+//                    codigo_socio[i].sector=pedirInt("INGRESE SECTOR");
+                    existe=1;
+                    /**< PEDIR TELEFONOO */
+                    break;
+                case 5:
+                    system("cls");
+                    pedirNombreValidarChars(codigo_socio[i].nombre_socio, 51);
+                    pedirApellidoValidarChars(codigo_socio[i].apellido_socio, 51);
+//                    codigo_socio[i].salary = pedirFloat("INGRESE SALARIO: ");
+//                    codigo_socio[i].sector = pedirInt("INGRESE SECTOR");
+                    existe=1;
+                    /**< MODIFICAR TODOS LOS CAMPOS */
+                    break;
+                case 0:
+                    puts("\nSocio no Modificado\n");
+                    flagDos=1;
+                    break;
+                default:
+                    puts("\nOpcion no Valida\n");
+                    flagDos=1;
+                    break;
+                }
+            }
+
+        }
+        if (existe==0&&flagDos==0)
+        {
+            puts("\nCod. de Socio no Encontrado\n");
+            break;
+        }
+    }
+    return existe;
+}
 
 
 /**< FUNCION BUSCAR SOCIO */
@@ -218,11 +432,36 @@ int buscar_socio(e_socio vector[], int codigo_socio)
 }
 
 /**< MOSTRAR SOCIO */
-void mostrar_socio(socio vector)
+/*void mostrar_socio(e_socio vector)
 {
 
     printf("%d   %s %s %c   %s   %s   \n", vector.codigo_socio, vector.apellido_socio, vector.nombre_socio, vector.sexo_socio, vector.telefono_socio, vector.email_socio);
 
 }
+*/
 
+/**< FUNCION ALTA DE SOCIO */
+int altaEmpleado(e_socio codigo_socio, int CANTIDAD)
+{
+    int index;
+    int existe=0;
+
+    index=buscarEspacioLibre(codigo_socio, CANTIDAD);
+
+    if(index!=-1)
+    {
+        system("cls");
+        puts("\nINGRESE DATOS DEL PERSONAL\n\n");
+
+        codigo_socio[index]=listarSocios();
+        codigo_socio[index].is_empty=OCUPADO;
+        codigo_socio[index].id=index+1;
+
+        puts("\n[CARGA EXITOSA] ");
+        system("pause");
+        system("cls");
+        existe=1;
+    }
+    return existe;
+}
 #endif // prototipos.h
