@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "prototipos.h"
+
+#define QTY 1000
 
 /**
     *\
@@ -22,6 +25,7 @@ int getInt(char mensaje[])
     *\
     *
 */
+
 float getFloat(char mensaje[])
 {
     float auxiliar;
@@ -170,7 +174,7 @@ int getStringLetras(char mensaje[], char input[])
     *\
     *
 */
-int gestStringNumeros(char mensaje[], char input[])
+int getStringNumeros(char mensaje[], char input[])
 {
     char aux[256];
     getString(mensaje, aux);
@@ -188,27 +192,28 @@ int gestStringNumeros(char mensaje[], char input[])
     *\
     *
 */
-void inicializarArray(int array[],int cantidad_elementos[], int valor) // CON ARRAYS
+void inicializarArray(int array[],int QTY[], int valor) // CON ARRAYS
 {
     int i;
-    for(i=0;i<cantidad_elementos;i++)
+    for(i=0;i<QTY;i++)
     {
         array[i]=valor;
     }
 }
 
-/** CON ESTRUCTURAS
-    *\
-    *\
-    *\
+/** Inicializa el array Empleados con el valor recibido -- CON ESTRUCTURAS
+    *\param array Es el array a ser inicializado (Empleados)
+    *\param QTY Indica la longitud del array
+    *\param valor Es el valor que sera cargado en cada posicion
+    *\return void
     *
 */
-void inicializarArray(Persona arrayPersonas[],int cantidad_elementos[], int valor) // CON ESTRUCTURAS
+void inicializarArrayEmpleados(Employee arrayEmpleados[],int QTY[], int valor) // CON ESTRUCTURAS
 {
     int i;
-    for(i=0;i<cantidad_elementos;i++)
+    for(i=0;i<QTY;i++)
     {
-        arrayPersonas[i].legajo=valor;
+        arrayEmpleados[i].id=valor;
     }
 }
 /** CON ARRAYS
@@ -217,10 +222,10 @@ void inicializarArray(Persona arrayPersonas[],int cantidad_elementos[], int valo
     *\
     *
 */
-int buscarPrimerOcurrencia(int array[],int cantidad_elementos[],int valor)
+int buscarPrimerOcurrencia(int array[],int QTY[],int valor)
 {
     int i;
-    for(i=0;i<cantidad_elementos;i++)
+    for(i=0;i<QTY;i++)
     {
         if(array[i]==valor)
         {
@@ -230,21 +235,22 @@ int buscarPrimerOcurrencia(int array[],int cantidad_elementos[],int valor)
     return -1;
 }
 
-/** CON ESTRUCTURAS
-    *\
-    *\
-    *\
-    *
+/** Busca la primer ocurrencia de un valor en el array Empleados -- CON ESTRUCTURAS
+    *\param arrayEmpleados es el array donde buscar
+    *\param QTY es la longitud del array
+    *\param valor es el valor que busco
+    *\return Si no hay coincidencia (-1); si la hubiere, la posicion en el array.
 */
-int buscarPrimerOcurrencia(Persona arrayPersonas[],int cantidad_elementos[],int valor)
+int buscarPrimerOcurrencia(Employee arrayEmpleados[],int QTY[],int valor)
 {
     int i;
-    for(i=0;i<cantidad_elementos;i++)
+    for(i=0;i<QTY;i++)
     {
-        if(arrayPersonas[i].legajo == valor)
+        if(arrayEmpleados[i].id== valor)
         {
             return i;
         }
     }
     return -1;
 }
+
