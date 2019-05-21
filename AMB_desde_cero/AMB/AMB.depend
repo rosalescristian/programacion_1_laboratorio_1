@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1557255841 source:d:\programacion\programacion_1_laboratorio_1\amb_desde_cero\amb\funciones_utn.c
+
+1514140574 source:d:\programacion\programacion_1_laboratorio_1\amb_desde_cero\amb\main.c
+	<stdio.h>
+	<stdlib.h>
+

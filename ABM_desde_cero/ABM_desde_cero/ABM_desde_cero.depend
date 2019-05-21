@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1557262600 source:c:\users\crisp\desktop\utn fra\abm_desde_cero\abm_desde_cero\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"prototipos.h"
+
+1557263985 c:\users\crisp\desktop\utn fra\abm_desde_cero\abm_desde_cero\prototipos.h
+
+1557264772 source:c:\users\crisp\desktop\utn fra\abm_desde_cero\abm_desde_cero\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1557511769 source:d:\programacion\programacion_1_laboratorio_1\abm_desde_cero\abm_desde_cero\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1557511454 source:d:\programacion\programacion_1_laboratorio_1\abm_desde_cero\abm_desde_cero\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"prototipos.h"
+
+1557509805 d:\programacion\programacion_1_laboratorio_1\abm_desde_cero\abm_desde_cero\prototipos.h
+
