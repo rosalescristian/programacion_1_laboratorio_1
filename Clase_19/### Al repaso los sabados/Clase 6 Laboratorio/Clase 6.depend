@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1556808688 source:c:\users\alumno\desktop\clase 6\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Clase.h"
+
+1556803990 c:\users\alumno\desktop\clase 6\clase.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1556808696 source:c:\users\alumno\desktop\clase 6\clase.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Clase.h"
+

@@ -1,0 +1,42 @@
+
+
+void ordenarAlumnosPorNotaYcritetrio(eAlumno lista[],int tam,int criterio)
+{
+
+    int i;
+    int j;
+    eAlumno auxiliar;
+    int tipoDeOrden;
+
+
+
+    for(i=0; i<tam-1; i++)
+    {
+        for(j=i+1; j<tam; j++)
+        {
+            if(criterio==1)
+            {
+                tipoDeOrden=lista[i].nota<lista[j].nota;
+            }else{
+                tipoDeOrden=lista[i].nota>lista[j].nota;
+            }
+            if(tipoDeOrden)
+            {
+                auxiliar=lista[i];
+                lista[i]=lista[j];
+                lista[j]=auxiliar;
+            }
+        }
+    }
+
+}
+
+
+
+en el main 
+
+        ordenarAlumnosPorNotaYcritetrio(lista,tam,-1);
+        mostrarListaAlumnos(lista,tam);
+
+        ordenarAlumnosPorNotaYcritetrio(lista,tam,1);
+        mostrarListaAlumnos(lista,tam);

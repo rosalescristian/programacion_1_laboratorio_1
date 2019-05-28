@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1556973528 source:/media/usuario/compartida/#enC/deUnoAMuchosPeliculas/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estudios.h"
+	"peliculas.h"
+
+1556973308 source:/media/usuario/compartida/#enC/deUnoAMuchosPeliculas/estudios.c
+	"estudios.h"
+
+1556973182 /media/usuario/compartida/#enC/deUnoAMuchosPeliculas/estudios.h
+
+1556973095 /media/usuario/compartida/#enC/deUnoAMuchosPeliculas/peliculas.h
+
+1556973296 source:/media/usuario/compartida/#enC/deUnoAMuchosPeliculas/peliculas.c
+	"peliculas.h"
+

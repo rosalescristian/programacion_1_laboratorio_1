@@ -1,0 +1,15 @@
+#ifndef PELICULAS_INCLUDED
+#define PELICULAS_INCLUDED
+
+typedef struct
+{
+    int estado;
+    int  id;
+    char nombre[50];
+    char FechaDePublicacion[13];
+    int idEstudio;
+    char director[50];
+
+}ePelicula;
+
+#endif // PELICULAS_INCLUDED
