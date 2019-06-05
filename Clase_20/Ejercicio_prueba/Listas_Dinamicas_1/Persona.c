@@ -36,7 +36,7 @@ void setEdad(Persona * persona, int edadaux)
  *           para los datos del doble puntero Persona mediante el uso de la funcion malloc.
  *
  * \param a size: Tamaño inicial de la lista.
- * \param b index: Indice.
+ * \param b index: Indice del array de punteros.
  * \return void.
  *
  */
