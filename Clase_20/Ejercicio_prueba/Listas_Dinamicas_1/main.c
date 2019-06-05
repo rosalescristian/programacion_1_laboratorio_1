@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "Persona.h"
 
 /**<
 Hay que sumarle
@@ -16,24 +17,20 @@ Hay que sumarle
         Biblioteca Persona
  */
 
-typedef struct{
-    int edad;
-    char nombre[55];
-}Persona;
+//void setName(Persona *, char nombreaux[]);
+//void setEdad(Persona *, int edadaux);
 
-
-void setName(Persona *,char nombreaux[]);
-void setEdad(Persona *, int edadaux);
 
 int main()
 {
     int size = 10;
-    int edadaux, i=0;
+    int edadaux, index=0;
     char salir='N';
     char nombreaux[55];
 
-    Persona* * lista = (Persona* * )malloc(sizeof(Persona * )*size);
-   // Persona* * lista= * lista;
+    persona_initLista();
+    //Persona* * lista = (Persona* * )malloc(sizeof(Persona * )*size);
+    // Persona* * lista= * lista;
 
 
     do {
@@ -44,44 +41,30 @@ int main()
         scanf("%s",nombreaux); // Aca tengo que hacer un getString
         setName(persona, nombreaux);
 
-
-
-        printf("\nIngrese una edad: ");
-        scanf("%d",edadaux);// Aca tengo que hacer un getInt
+        printf("\nIngrese su edad: ");
+        scanf("%d",&edadaux);// Aca tengo que hacer un getInt
         setEdad(persona, edadaux);
-
 
         //lista=lista;
 
-        if(lista==size)
+        lista[index]=persona;
+        index++;
+
+        if(index>=size)
             {
                 // incrementamos el tamaño del array
-                //size+=10;
-                *lista = malloc(sizeof(Persona*));
+                size+=10;
+                lista = realloc(lista,sizeof(Persona*)*size);
                 //Persona* persona = (Persona*)malloc(sizeof(Persona))
             }
-        else
-            {
-                lista=lista;
-                //lista[i] = persona; // Ver explicacion sobre esta línea
-                i++;
-            }
 
-
-        fflush(stdin);
         printf("Desea salir? S/N\n");
-        scanf("%c\n", &salir);
+        fflush(stdin);
+        scanf("%c", &salir);
 
     }while(salir!='S');
 
     return 0;
 }
 
-void setName(Persona * persona, char nombreaux[]){
 
-    strcpy(persona->nombre, nombreaux);
-}
-
-void setEdad(Persona * persona, int edadaux){
-    persona->edad=edadaux;
-}
