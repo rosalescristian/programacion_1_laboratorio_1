@@ -24,7 +24,7 @@ Hay que sumarle
 int main()
 {
     int size = 10;
-    int edadaux, index=0;
+    int edadaux, index=0, lista[10];
     char salir='N';
     char nombreaux[55];
 
@@ -54,9 +54,11 @@ int main()
             {
                 // incrementamos el tamaño del array
                 size+=10;
-                lista = realloc(lista,sizeof(Persona*)*size);
+                lista[index] = realloc(lista,sizeof(Persona*)*size);
                 //Persona* persona = (Persona*)malloc(sizeof(Persona))
             }
+
+
 
         printf("Desea salir? S/N\n");
         fflush(stdin);

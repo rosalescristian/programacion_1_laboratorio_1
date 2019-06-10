@@ -3,7 +3,6 @@
 #include "LinkedList.h"
 #include "Employee.h"
 
-
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
  * \param path char*
@@ -37,6 +36,7 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
+
     return 1;
 }
 
@@ -71,8 +71,14 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_ListEmployee(LinkedList* pArrayListEmployee)
+int controller_ListEmployee(LinkedList* listaEmpleados, int len)
 {
+    int i;
+    for(i=0; i<len; i++)
+   {
+        printf("%d - %s - %d - %d\n", listaEmpleados[i].id, listaEmpleados[i].nombre, listaEmpleados[i].horasTrabajadas, listaEmpleados[i].sueldo);
+   }
+
     return 1;
 }
 
@@ -112,3 +118,16 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
     return 1;
 }
 
+int getInt(optionAux, optionAux)
+{
+    int retorno = -1;
+    if(optionAux<0 || optionAux>10)
+    {
+        printf("Ha ingresado una opcion no valida. Por favor elija nuevamente (1-10)");
+    }
+    else
+    {
+        retorno = 1;
+    }
+
+}

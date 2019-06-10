@@ -3,6 +3,7 @@
 
 int main()
 {
-    printf("Hello world!\n");
-    return 0;
+    int retorno = 1;
+    void funcionMenu();
+    return retorno;
 }

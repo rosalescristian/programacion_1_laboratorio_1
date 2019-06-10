@@ -1,5 +1,12 @@
 # depslib dependency file v1.0
-1559689994 source:d:\rosales\programacion_1_laboratorio_1\clase_20\ejercicio_prueba\listas_dinamicas_1\main.c
+1560204862 source:d:\rosales\programacion_1_laboratorio_1\clase_20\ejercicio_prueba\listas_dinamicas_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Persona.h"
+
+1560204707 d:\rosales\programacion_1_laboratorio_1\clase_20\ejercicio_prueba\listas_dinamicas_1\persona.h
+
+1560204905 source:d:\rosales\programacion_1_laboratorio_1\clase_20\ejercicio_prueba\listas_dinamicas_1\persona.c
 	<stdio.h>
 	<stdlib.h>
 

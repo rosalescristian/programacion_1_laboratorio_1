@@ -42,9 +42,9 @@ void setEdad(Persona * persona, int edadaux)
  */
 void persona_initLista(void)
 {
-    size = 10;
-    index = 0;
-    lista = (Persona**)malloc(sizeof(Persona*)*size);
+    int size = 10;
+    int index = 0;
+    int lista = (Persona**)malloc(sizeof(Persona*)*size);
 }
 
 /** \brief : setEdad: Almacena un entero en el elemento 'edad' de la estructura 'Persona'.
