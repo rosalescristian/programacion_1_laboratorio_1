@@ -6,6 +6,7 @@ typedef struct
     char nombre[128];
     int horasTrabajadas;
     int sueldo;
+
 }Employee;
 
 Employee* employee_new();

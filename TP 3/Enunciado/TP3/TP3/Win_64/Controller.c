@@ -71,12 +71,14 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_ListEmployee(LinkedList* listaEmpleados, int len)
+int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
+    int len=ll_len(pArrayListEmployee);
     int i;
     for(i=0; i<len; i++)
    {
-        printf("%d - %s - %d - %d\n", listaEmpleados[i].id, listaEmpleados[i].nombre, listaEmpleados[i].horasTrabajadas, listaEmpleados[i].sueldo);
+        //printf("%d - %s - %d - %d\n", pArrayListEmployee[i].id, pArrayListEmployee[i].nombre, pArrayListEmployee[i].horasTrabajadas, pArrayListEmployee[i].sueldo);
+
    }
 
     return 1;
@@ -118,7 +120,7 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
     return 1;
 }
 
-int getInt(optionAux, optionAux)
+int getInt(optionAux)
 {
     int retorno = -1;
     if(optionAux<0 || optionAux>10)
@@ -129,5 +131,5 @@ int getInt(optionAux, optionAux)
     {
         retorno = 1;
     }
-
+    return retorno;
 }
