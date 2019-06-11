@@ -35,6 +35,11 @@ int ll_len(LinkedList* this)
 {
     int returnAux = -1;
 
+    if(this!=NULL)
+    {
+        returnAux = this->size;
+    }
+
     return returnAux;
 }
 

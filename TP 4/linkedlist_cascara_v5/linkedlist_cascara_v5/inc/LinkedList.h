@@ -21,8 +21,8 @@
 struct Node
 {
     void* pElement;
-    struct Node* pNextNode;
-}typedef Node;
+    struct Node* pNextNode; // Un puntero de estructura dentro de si mismo.
+}typedef Node; // Estructura auto referenciada
 
 struct LinkedList
 {
