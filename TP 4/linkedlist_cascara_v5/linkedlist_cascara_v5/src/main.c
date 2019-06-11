@@ -26,10 +26,10 @@
 //POR CADA FUNCION DESARROLLADA HAY QUE CORRER EL TESTIG DESCOMENTANDO
 int main(void)
 {
-    /*  startTesting(1);  // ll_newLinkedList
-        startTesting(2);  // ll_len
+        startTesting(1);  // ll_newLinkedList -- DESARROLLADA OK -- TEST 100%
+        startTesting(2);  // ll_len -- DESARROLLADA OK -- TEST 100%
         startTesting(3);  // getNode - test_getNode
-        startTesting(4);  // addNode - test_addNode
+        /*startTesting(4);  // addNode - test_addNode
         startTesting(5);  // ll_add
         startTesting(6);  // ll_get
         startTesting(7);  // ll_set
@@ -37,8 +37,8 @@ int main(void)
         startTesting(9);  // ll_clear
         startTesting(10); // ll_deleteLinkedList
         startTesting(11); // ll_indexOf
-        startTesting(12); // ll_isEmpty
-        startTesting(13); // ll_push
+        */startTesting(12); // ll_isEmpty -- DESARROLLADA OK (Prueba 50% debe haber algo pendiente)
+        /*startTesting(13); // ll_push
         startTesting(14); // ll_pop
         startTesting(15); // ll_contains
         startTesting(16); // ll_containsAll

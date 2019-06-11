@@ -52,11 +52,23 @@ int ll_len(LinkedList* this)
                         (pElement) Si funciono correctamente
  *
  */
-static Node* getNode(LinkedList* this, int nodeIndex)
+static Node* getNode(LinkedList* this, int nodeIndex) // recibo el puntero THIS y el nodeIndex
 {
-    Node* pNode = NULL;
+    Node* pNode = NULL; // configuro para el error
+    if(this!=NULL) // si this no es NULL entra al IF
+    {
+        if(nodeIndex >= 0 && nodeIndex < ll_len(this)) // Si el Index es mayor A 0 y menor al largo de la lista
+        {
+            pNode = this->pFirstNode; // asigna el primer nodo a nodo
 
-    return pNode;
+            while(nodeIndex > 0) // siempre y cuando sea > 0 itera
+            {
+                pNode = pNode->pNextNode; // asigno al nodo anterior (0) el q le sigue (1)
+                nodeIndex--; // resto 1 del indice. SIMULALO CON 2 Y HACE EL CALCULO
+            }
+        }
+    }
+    return pNode; // Devuelvo si esta vacio, NULL, si es 0 o superior, la direccion que corresponde
 }
 
 /** \brief  Permite realizar el test de la funcion getNode la cual es privada
@@ -223,7 +235,17 @@ int ll_indexOf(LinkedList* this, void* pElement)
 int ll_isEmpty(LinkedList* this)
 {
     int returnAux = -1;
-
+    if(this!=NULL)
+    {
+        if(ll_len(this))
+        {
+            returnAux = 0;
+        }
+        else
+        {
+            returnAux = 1;
+        }
+    }
     return returnAux;
 }
 

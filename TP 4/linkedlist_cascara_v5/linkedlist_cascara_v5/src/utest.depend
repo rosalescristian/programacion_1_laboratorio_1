@@ -4347,3 +4347,18 @@
 	<stdlib.h>
 	<string.h>
 
+1560215024 source:d:\rosales\programacion_1_laboratorio_1\tp 4\linkedlist_cascara_v5\linkedlist_cascara_v5\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../testing/inc/main_test.h"
+	"../inc/LinkedList.h"
+
+1560210570 d:\rosales\programacion_1_laboratorio_1\tp 4\linkedlist_cascara_v5\linkedlist_cascara_v5\testing\inc\main_test.h
+
+1560213761 source:d:\rosales\programacion_1_laboratorio_1\tp 4\linkedlist_cascara_v5\linkedlist_cascara_v5\src\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/LinkedList.h"
+
