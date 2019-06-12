@@ -32,9 +32,9 @@ int main(void)
 //        startTesting(4);  // addNode - test_addNode
       /*  startTesting(5);  // ll_add
         startTesting(6);  // ll_get
-        startTesting(7);  // ll_set
-        startTesting(8);  // ll_remove
-     */   startTesting(9);  // ll_clear -- DESARROLLADA -- TEST 33%
+      */  startTesting(7);  // ll_set -- DESARROLLADA -- TEST 50%
+//        startTesting(8);  // ll_remove
+     //*/   startTesting(9);  // ll_clear -- DESARROLLADA -- TEST 33%
       startTesting(10); // ll_deleteLinkedList // DESARROLLADA OK - TEST 100%
         /*startTesting(11); // ll_indexOf
     */  startTesting(12); // ll_isEmpty -- DESARROLLADA OK (Prueba 50% debe haber algo pendiente)

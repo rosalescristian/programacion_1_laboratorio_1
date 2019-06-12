@@ -94,16 +94,10 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
                         ( 0) Si funciono correctamente
  *
  */
-static int addNode(LinkedList* this, int nodeIndex,void* pElement) //ESTO ESTA BIEN¿? NOOOOOOOOOOOOO
+static int addNode(LinkedList* this, int nodeIndex,void* pElement) //ESTO ESTA BIEN¿? NOOOOOOOOOOOOO // LA BORRE
 {
     int returnAux = -1;
-    //nodeIndex = getNode(LinkedList* this, int nodeIndex);
-    if(this != NULL)
-    {
-        LinkedList* this = (LinkedList*)malloc(sizeof(this));
-        pElement=nodeIndex;
-        returnAux = 0;
-    }
+
     return returnAux;
 }
 
@@ -165,6 +159,12 @@ void* ll_get(LinkedList* this, int index)
 int ll_set(LinkedList* this, int index,void* pElement)
 {
     int returnAux = -1;
+    //int index = Node* getNode(LinkedList* this, int nodeIndex);
+    if(this != NULL)
+    {
+        void* pElement = index;
+        returnAux = 0;
+    }
 
     return returnAux;
 }
