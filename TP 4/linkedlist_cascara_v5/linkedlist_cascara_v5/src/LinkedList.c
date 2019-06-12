@@ -94,9 +94,49 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
                         ( 0) Si funciono correctamente
  *
  */
-static int addNode(LinkedList* this, int nodeIndex,void* pElement) //ESTO ESTA BIEN¿? NOOOOOOOOOOOOO // LA BORRE
+static int addNode(LinkedList* this, int nodeIndex,void* pElement) // LA PASO DAVID HAY Q CAMBIAR LOS NOMBRES DE LAS VARIABLES
 {
     int returnAux = -1;
+
+    Node* prev;
+    Node* next;
+    Node* nuevoNodo;
+
+    if( this != NULL)
+    {
+        if(nodeIndex >= 0 && nodeIndex <= ll_len(this))
+        {
+            nuevoNodo = (Node*)malloc(sizeof(Node));
+            if(nuevoNodo != NULL)
+            {
+                nuevoNodo->pElement = pElement;
+                nuevoNodo->pNextNode = NULL;
+
+                if(nodeIndex == 0)
+                {
+                    nuevoNodo->pNextNode = this->pFirstNode;
+                    this->pFirstNode = nuevoNodo;
+                }
+                else
+                {
+                    prev = this->pFirstNode;
+                    next = prev->pNextNode;
+
+                    while( nodeIndex > 1)
+                    {
+                        prev  = next;
+                        next  = prev->pNextNode;
+                        nodeIndex--;
+                    }
+
+                    prev->pNextNode = nuevoNodo;
+                    nuevoNodo->pNextNode = next;
+                }
+                this->size++;
+                returnAux = 0;
+            }
+        }
+    }
 
     return returnAux;
 }
@@ -165,6 +205,8 @@ int ll_set(LinkedList* this, int index,void* pElement)
         void* pElement = index;
         returnAux = 0;
     }
+    // a tener en cuenta; no retorna OK con un parametro seteado con esta misma func. Tengo q malloc
+    // Si intenta setear un elemento fuera del indice, tiene q poder sumarlo con malloc
 
     return returnAux;
 }
@@ -262,13 +304,13 @@ int ll_isEmpty(LinkedList* this)
     int returnAux = -1;
     if(this!=NULL)
     {
-        if(ll_len(this))
+        if(this->pFirstNode != NULL)
         {
-            returnAux = 0;
+            returnAux = 1;
         }
         else
         {
-            returnAux = 1;
+            returnAux = 0;
         }
     }
     return returnAux;
