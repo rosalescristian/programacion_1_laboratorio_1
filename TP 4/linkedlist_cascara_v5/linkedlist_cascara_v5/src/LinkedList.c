@@ -94,10 +94,16 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
                         ( 0) Si funciono correctamente
  *
  */
-static int addNode(LinkedList* this, int nodeIndex,void* pElement)
+static int addNode(LinkedList* this, int nodeIndex,void* pElement) //ESTO ESTA BIEN¿? NOOOOOOOOOOOOO
 {
     int returnAux = -1;
-
+    //nodeIndex = getNode(LinkedList* this, int nodeIndex);
+    if(this != NULL)
+    {
+        LinkedList* this = (LinkedList*)malloc(sizeof(this));
+        pElement=nodeIndex;
+        returnAux = 0;
+    }
     return returnAux;
 }
 
@@ -172,9 +178,10 @@ int ll_set(LinkedList* this, int index,void* pElement)
                         ( 0) Si funciono correctamente
  *
  */
-int ll_remove(LinkedList* this,int index)
+int ll_remove(LinkedList* this,int nodeIndex)
 {
     int returnAux = -1;
+
 
     return returnAux;
 }
@@ -187,9 +194,19 @@ int ll_remove(LinkedList* this,int index)
                         ( 0) Si funciono correctamente
  *
  */
-int ll_clear(LinkedList* this)
+int ll_clear(LinkedList* this) // 33% OK....Le hace falta trabajo pero va bieeeen
 {
-    int returnAux = -1;
+    int returnAux = -1, i, pNode;
+    Node* pNextNode;
+    void* pElement;
+
+    for(i=0;i<ll_len(this);i++)
+    {
+            this->pFirstNode=pNextNode;
+            pElement = NULL;
+            this->pFirstNode= NULL;
+            returnAux = 0;
+    }
 
     return returnAux;
 }
@@ -204,7 +221,15 @@ int ll_clear(LinkedList* this)
  */
 int ll_deleteLinkedList(LinkedList* this)
 {
-    int returnAux = -1;
+   int returnAux = -1;
+
+   if(this != NULL)
+   {
+        printf("Eliminando... %d\n", this->pFirstNode);
+        free(this->pFirstNode);
+        //this->pFirstNode = *this;
+        returnAux = 0;
+    }
 
     return returnAux;
 }
