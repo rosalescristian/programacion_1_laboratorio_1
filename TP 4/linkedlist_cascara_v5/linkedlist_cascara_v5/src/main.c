@@ -26,25 +26,26 @@
 //POR CADA FUNCION DESARROLLADA HAY QUE CORRER EL TESTIG DESCOMENTANDO
 int main(void)
 {
+// NO VALIDAR LOS pElement en ninguna funcion.
         startTesting(1);  // ll_newLinkedList -- DESARROLLADA OK -- TEST 100%
         startTesting(2);  // ll_len -- DESARROLLADA OK -- TEST 100%
         startTesting(3);  // getNode - test_getNode -- DESARROLLADA OK -- TEST 100%
-//        startTesting(4);  // addNode - test_addNode
-      /*  startTesting(5);  // ll_add
-        startTesting(6);  // ll_get
-      */  startTesting(7);  // ll_set -- DESARROLLADA -- TEST 50%
-//        startTesting(8);  // ll_remove
-     //*/   startTesting(9);  // ll_clear -- DESARROLLADA -- TEST 33%
-      startTesting(10); // ll_deleteLinkedList // DESARROLLADA OK - TEST 100%
-        /*startTesting(11); // ll_indexOf
-    */  startTesting(12); // ll_isEmpty -- DESARROLLADA OK (Prueba 50% debe haber algo pendiente)
-        /*startTesting(13); // ll_push
-        startTesting(14); // ll_pop
-        startTesting(15); // ll_contains
-        startTesting(16); // ll_containsAll
-        startTesting(17); // ll_subList
-        startTesting(18); // ll_clone
-        startTesting(19); // ll_sort */
+//      startTesting(4);  // addNode - test_addNode -- ESTA TIENE ROTO EL TEST
+//      startTesting(5);  // ll_add
+//      startTesting(6);  // ll_get
+        startTesting(7);  // ll_set -- DESARROLLADA -- TEST 50%
+//      startTesting(8);  // ll_remove
+        startTesting(9);  // ll_clear -- DESARROLLADA -- TEST 33%
+        startTesting(10); // ll_deleteLinkedList // DESARROLLADA OK - TEST 100%
+//      startTesting(11); // ll_indexOf
+        startTesting(12); // ll_isEmpty -- DESARROLLADA OK (Prueba 50% debe haber algo pendiente)
+//      startTesting(13); // ll_push
+//      startTesting(14); // ll_pop
+//      startTesting(15); // ll_contains
+//      startTesting(16); // ll_containsAll
+//      startTesting(17); // ll_subList
+//      startTesting(18); // ll_clone
+//      startTesting(19); // ll_sort
 
     return 0;
 }
