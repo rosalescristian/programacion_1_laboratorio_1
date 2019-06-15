@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1559688251 source:d:\rosales\programacion_1_laboratorio_1\clase_22\ejercicio\nueva carpeta\biblioteca_lista_dinamica\main.c
-	<stdio.h>
-	<stdlib.h>
-	"persona.h"
-
-1559688422 d:\rosales\programacion_1_laboratorio_1\clase_22\ejercicio\nueva carpeta\biblioteca_lista_dinamica\persona.h
-

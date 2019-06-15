@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1556199384 source:d:\martinez tomas\clase 2504\main.c
-	<stdio.h>
-	<stdlib.h>
-	"producto.h"
-
-1556199384 d:\martinez tomas\clase 2504\producto.h
-
